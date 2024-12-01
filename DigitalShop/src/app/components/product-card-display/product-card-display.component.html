@@ -1,5 +1,7 @@
 <div class="product-card">
-    <img [src]="getImageUrl()" [alt]="product.name" class="product-image" />
-    <h2 class="product-name">{{ product.name }}</h2>
-    <p class="product-price">$ {{ product.price }}</p>
+    <a [routerLink]="['/product', product.id, product.slug]">
+        <img [src]="getImageUrl()" [alt]="product.name" class="product-image" />
+        <h2 class="product-name">{{ product.name }}</h2>
+        <p class="product-price">$ {{ product.price }}</p>
+    </a>
 </div>

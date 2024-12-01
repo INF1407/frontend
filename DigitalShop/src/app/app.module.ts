@@ -15,6 +15,8 @@ import { PasswordResetComponent } from './pages/auth/password-reset/password-res
 import { UserProfileComponent } from './pages/user-profile/user-profile.component';
 import { NewProductFormComponent } from './components/new-product-form/new-product-form.component';
 import { ChangePasswordFormComponent } from './components/change-password-form/change-password-form.component';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { ProductBigCardDisplayComponent } from './components/product-big-card-display/product-big-card-display.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { ChangePasswordFormComponent } from './components/change-password-form/c
     UserProfileComponent,
     NewProductFormComponent,
     ChangePasswordFormComponent,
+    ProductDetailComponent,
+    ProductBigCardDisplayComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

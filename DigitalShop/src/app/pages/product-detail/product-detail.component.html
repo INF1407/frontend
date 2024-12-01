@@ -1,0 +1,8 @@
+<div class="product-detail-container">
+    <ng-container *ngIf="product; else errorTemplate">
+        <app-product-big-card-display [product]="product"></app-product-big-card-display>
+    </ng-container>
+    <ng-template #errorTemplate>
+        <p class="error-message">{{ errorMessage }}</p>
+    </ng-template>
+</div>
