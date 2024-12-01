@@ -1,15 +1,24 @@
 <div class="container__menu-bar">
-
     <nav>
         <div class="logo">
             <a routerLink="/">E-Commerce</a>
         </div>
         <ul>
             <li><a routerLink="/">Home</a></li>
-            <li><a routerLink="/login">Login</a></li>
-            <li><a routerLink="/register">Register</a></li>
-            <li><a routerLink="/checkout">Checkout</a></li>
+            <li><a routerLink="/cart">Cart</a></li>
+
+            <!-- Show Login if not authenticated -->
+            <li *ngIf="!isAuthenticated">
+                <a routerLink="/login">Login</a>
+            </li>
+
+            <!-- Show user's name and personal page link if authenticated -->
+            <li *ngIf="isAuthenticated">
+                <a routerLink="/profile">{{ userName }}</a>
+            </li>
+            <li *ngIf="isAuthenticated">
+                <a (click)="logout()">Logout</a>
+            </li>
         </ul>
     </nav>
-
 </div>
