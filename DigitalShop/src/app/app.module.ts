@@ -13,6 +13,8 @@ import { ForgotPasswordComponent } from './pages/auth/forgot-password/forgot-pas
 import { RegisterComponent } from './pages/auth/register/register.component';
 import { PasswordResetComponent } from './pages/auth/password-reset/password-reset.component';
 import { UserProfileComponent } from './pages/user-profile/user-profile.component';
+import { NewProductFormComponent } from './components/new-product-form/new-product-form.component';
+import { ChangePasswordFormComponent } from './components/change-password-form/change-password-form.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { UserProfileComponent } from './pages/user-profile/user-profile.componen
     RegisterComponent,
     PasswordResetComponent,
     UserProfileComponent,
+    NewProductFormComponent,
+    ChangePasswordFormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

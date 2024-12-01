@@ -18,7 +18,7 @@ export class LoginComponent {
     this.authService.login(this.username, this.password).subscribe({
       next: (success) => {
         if (success) {
-          this.router.navigate(['/']); // Redirect only on successful login
+          this.router.navigate(['/profile']); // Redirect only on successful login
         }
       },
       error: (error) => {

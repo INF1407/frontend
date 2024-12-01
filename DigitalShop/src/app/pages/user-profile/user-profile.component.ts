@@ -17,6 +17,9 @@ export class UserProfileComponent implements OnInit {
   successMessage: string | null = null;
   errorMessage: string | null = null;
 
+  showProductForm: boolean = false; // flag for toggling the product form
+  showChangePasswordForm: boolean = false; // Toggle for change password form
+
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
@@ -61,7 +64,18 @@ export class UserProfileComponent implements OnInit {
   }
 
   createProduct(): void {
-    console.log('Create Product button clicked.');
-    // Functionality to be implemented later
+    this.showProductForm = true; // Show the product form
+  }
+
+  closeProductForm(): void {
+    this.showProductForm = false; // Hide the product form
+  }
+
+  changePassword(): void {
+    this.showChangePasswordForm = true; // Show the change password form
+  }
+
+  closeChangePasswordForm(): void {
+    this.showChangePasswordForm = false; // Hide the change password form
   }
 }

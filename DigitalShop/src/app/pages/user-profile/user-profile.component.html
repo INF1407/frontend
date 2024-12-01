@@ -25,4 +25,9 @@
         <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
     </form>
     <button class="btn btn-secondary" (click)="createProduct()">Create New Product</button>
+    <button class="btn btn-secondary" (click)="changePassword()">Change Password</button>
+
+    <app-new-product-form *ngIf="showProductForm" (close)="closeProductForm()"></app-new-product-form>
+    <app-change-password-form *ngIf="showChangePasswordForm"
+        (close)="closeChangePasswordForm()"></app-change-password-form>
 </div>
