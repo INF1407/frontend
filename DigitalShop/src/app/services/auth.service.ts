@@ -24,19 +24,23 @@ export class AuthService {
     const body = { username, password };
 
     return this.http.post<{ token: string }>(url, body).pipe(
-      tap((response) => {
-        // Save token and update state
+      map((response) => {
+        // Save token and update state on success
         localStorage.setItem('auth_token', response.token);
         this.isAuthenticated = true;
-        this.userName = username; // Update username locally
+        this.userName = username;
+        return true; // Indicate successful login
       }),
-      // Catch errors and return a consistent boolean
       catchError((error) => {
-        console.error('Login failed', error);
-        return of(false); // Always return a boolean
-      }),
-      // Map the stream to a boolean indicating success
-      map(() => true)
+        console.error('Login failed:', error);
+        if (error.status === 401) {
+          // Unauthorized: invalid credentials
+          return of(false);
+        } else {
+          // Re-throw other errors for further handling
+          throw error;
+        }
+      })
     );
   }
 
