@@ -12,6 +12,7 @@ import { LoginComponent } from './pages/auth/login/login.component';
 import { ForgotPasswordComponent } from './pages/auth/forgot-password/forgot-password.component';
 import { RegisterComponent } from './pages/auth/register/register.component';
 import { PasswordResetComponent } from './pages/auth/password-reset/password-reset.component';
+import { UserProfileComponent } from './pages/user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { PasswordResetComponent } from './pages/auth/password-reset/password-res
     ForgotPasswordComponent,
     RegisterComponent,
     PasswordResetComponent,
+    UserProfileComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
