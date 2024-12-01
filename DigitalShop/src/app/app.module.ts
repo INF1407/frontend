@@ -9,6 +9,9 @@ import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProductCardDisplayComponent } from './components/product-card-display/product-card-display.component';
 import { LoginComponent } from './pages/auth/login/login.component';
+import { ForgotPasswordComponent } from './pages/auth/forgot-password/forgot-password.component';
+import { RegisterComponent } from './pages/auth/register/register.component';
+import { PasswordResetComponent } from './pages/auth/password-reset/password-reset.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +20,9 @@ import { LoginComponent } from './pages/auth/login/login.component';
     HomeComponent,
     ProductCardDisplayComponent,
     LoginComponent,
+    ForgotPasswordComponent,
+    RegisterComponent,
+    PasswordResetComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

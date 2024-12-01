@@ -8,8 +8,8 @@ import { AuthService } from '../../../services/auth.service';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-  username: string = ''; // Ensure string type
-  password: string = ''; // Ensure string type
+  username: string = '';
+  password: string = '';
   errorMessage: string | null = null;
 
   constructor(private authService: AuthService, private router: Router) {}
@@ -18,13 +18,15 @@ export class LoginComponent {
     this.authService.login(this.username, this.password).subscribe({
       next: (success) => {
         if (success) {
-          this.router.navigate(['']);
-        } else {
-          this.errorMessage = 'Invalid username or password.';
+          this.router.navigate(['/']); // Redirect only on successful login
         }
       },
-      error: () => {
-        this.errorMessage = 'An error occurred. Please try again later.';
+      error: (error) => {
+        if (error.status === 401) {
+          this.errorMessage = 'Invalid username or password.';
+        } else {
+          this.errorMessage = 'An error occurred. Please try again later.';
+        }
       },
     });
   }
