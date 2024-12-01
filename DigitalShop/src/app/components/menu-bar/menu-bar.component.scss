@@ -1,0 +1,38 @@
+.container__menu-bar {
+  margin: 0; /* Remove any margins */
+  padding: 0; /* Remove any padding */
+}
+
+.container__menu-bar > nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #343a40;
+  color: rgb(148, 10, 10);
+  padding: 1rem 2rem;
+}
+
+.logo > a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.container__menu-bar > nav > ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.container__menu-bar > nav > ul > li > a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.container__menu-bar > nav > ul > li > a:hover {
+  color: #007bff;
+}
