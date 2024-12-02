@@ -1,5 +1,5 @@
 export const environment = {
-  api_host: 'http://localhost:8000/',
-  productsListAPI: 'http://localhost:8000/products/list/',
-  loginAPI: 'http://localhost:8000/account/token-auth/',
+  api_host: 'https://we-shop-3f005a9a94c2.herokuapp.com/',
+  productsListAPI: 'https://we-shop-3f005a9a94c2.herokuapp.com/products/list/',
+  loginAPI: 'https://we-shop-3f005a9a94c2.herokuapp.com/account/token-auth/',
 };
