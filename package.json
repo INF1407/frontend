@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "npx http-server ./dist/digital-shop -p $PORT",
-    "build": "ng build --prod",
+    "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -34,5 +34,10 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "typescript": "~5.0.2"
+  },
+  "engines": {
+  "node": "16.x",
+  "npm": "8.x"
   }
+
 }
