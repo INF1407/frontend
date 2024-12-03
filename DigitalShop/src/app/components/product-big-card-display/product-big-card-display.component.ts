@@ -11,6 +11,6 @@ export class ProductBigCardDisplayComponent {
   @Input() product!: ProductData;
 
   getImageUrl(): string {
-    return `${environment.api_host}${this.product.image}`;
+    return `${environment.api_static}${this.product.image}`;
   }
 }

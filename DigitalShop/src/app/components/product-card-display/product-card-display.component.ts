@@ -12,6 +12,6 @@ export class ProductCardDisplayComponent {
 
   // Method to generate the full URL for the product image
   getImageUrl(): string {
-    return `${environment.api_host}${this.product.image}`;
+    return `${environment.api_static}${this.product.image}`;
   }
 }
